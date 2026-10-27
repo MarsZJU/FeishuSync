@@ -37,7 +37,15 @@ AI 时代，每个人都可以建立自己的数字化资产，将自己数字�
 npx @larksuite/cli@latest install
 ```
 
-安装后，按照 [Lark CLI 官方说明](https://github.com/larksuite/cli)完成应用配置和用户授权。
+安装位置取决于你的 Node.js/npm 环境，不一定在 Homebrew 目录下。安装完成后，运行以下命令查看 CLI 的实际路径：
+
+```sh
+command -v lark-cli
+```
+
+复制输出的完整路径，稍后填入 App 设置中的“CLI 与登录 → CLI 可执行文件路径”。如果没有输出，说明当前终端尚未找到 CLI，请先检查安装是否成功，或重新打开终端后再试。
+
+然后按照 [Lark CLI 官方说明](https://github.com/larksuite/cli)完成应用配置和用户授权。
 
 已配置过 CLI 的用户可以直接复用现有登录。需要登录时运行：
 
@@ -45,13 +53,17 @@ npx @larksuite/cli@latest install
 lark-cli auth login
 ```
 
+复制终端显示的授权链接，在浏览器中打开，按照页面提示完成登录和授权。保留终端窗口，等待终端提示登录成功后，再回到 App 同步；如果浏览器已自动打开，直接在该页面完成授权即可。
+
 ### 2. 打开应用
 
 解压应用安装包，双击 `FeishuSync.app`。也可以按照下文从源码构建。
 
 启动后，屏幕顶部菜单栏会显示云朵循环箭头图标。点击图标，选择“设置与同步详情”。
 
-应用默认使用 `/opt/homebrew/bin/lark-cli`；如果你的安装位置不同，可以在设置的“CLI 与登录”中修改。
+在设置中展开“CLI 与登录”，将“CLI 可执行文件路径”设为前面 `command -v lark-cli` 输出的完整路径。应用预填的 `/opt/homebrew/bin/lark-cli` 仅适用于对应安装环境，并非所有用户的实际位置。
+
+当前版本对 nvm 等 Node.js 版本管理器的运行环境支持尚不完善。如果路径正确却提示找不到 `node`，说明运行环境仍需适配，并不代表 CLI 没有安装成功。
 
 ### 3. 添加备份内容
 
