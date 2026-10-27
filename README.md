@@ -1,9 +1,11 @@
 # FeishuSync · 飞书备份
-
 一个轻量的 macOS 菜单栏工具，将飞书云文档自动备份到本地文件夹或 iCloud Drive。
 
-**在飞书里编辑，在自己的电脑上保留一份。**
 
+## 用途 
+AI 时代，每个人都可以建立自己的数字化资产，将自己数字化，更充分的与AI结合。用飞书云文档编辑自己的文稿，再通过这款应用导出为 Markdown 或 PDF 文件并同步到本地，使用Codex/Claude Code 或其他 Agent 应用阅读这些文档，充分利用AI。
+
+**在飞书里编辑，在自己的电脑上保留一份。**
 ## 功能
 
 - **菜单栏操作**：同步、暂停、打开备份目录和设置。
@@ -23,13 +25,19 @@
 - 已安装并配置官方 [Lark CLI](https://github.com/larksuite/cli)
 - 当前登录用户具有对应文档的读取和导出权限
 
-当前构建目标为 Apple Silicon，尚未提供 Intel 版本。
+当前构建目标为 Apple Silicon，尚未提供 Intel 版本和 Windows 版本。
 
 ## 开始使用
 
 ### 1. 配置飞书 CLI
 
-按照 [Lark CLI 官方说明](https://github.com/larksuite/cli)完成安装、应用配置和用户授权。
+先安装 Node.js（包含 npm/npx），然后在终端运行官方安装命令：
+
+```sh
+npx @larksuite/cli@latest install
+```
+
+安装后，按照 [Lark CLI 官方说明](https://github.com/larksuite/cli)完成应用配置和用户授权。
 
 已配置过 CLI 的用户可以直接复用现有登录。需要登录时运行：
 

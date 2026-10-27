@@ -1,0 +1,21 @@
+# Local build products and release archives
+/build/
+/releases/
+/dist/
+*.app/
+*.zip
+*.dSYM/
+
+# macOS metadata and local settings
+.DS_Store
+._*
+.env
+.env.*
+!.env.example
+*.log
+settings.json
+manifest.json
+*.pdf
+/SyncData/
+/LegacyArchives/
+/FeishuSync-Backups/
